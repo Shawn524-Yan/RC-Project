@@ -1,0 +1,22 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+
+# Qt/QML
+*.qmlc
+*.jsc
+
+# VS Code settings
+.vscode/
+
+# Misc
+*.pcd
+*.e57
+*.swp
+# large files
+.vscode/browse.vc.db
