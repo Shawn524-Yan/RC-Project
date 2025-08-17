@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/qml_gui/qml_gui.egg-info/PKG-INFO
+writing dependency_links to ../../build/qml_gui/qml_gui.egg-info/dependency_links.txt
+writing entry points to ../../build/qml_gui/qml_gui.egg-info/entry_points.txt
+writing requirements to ../../build/qml_gui/qml_gui.egg-info/requires.txt
+writing top-level names to ../../build/qml_gui/qml_gui.egg-info/top_level.txt
+reading manifest file '../../build/qml_gui/qml_gui.egg-info/SOURCES.txt'
+writing manifest file '../../build/qml_gui/qml_gui.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages/qml_gui-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/qml_gui/qml_gui.egg-info to /home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages/qml_gui-0.0.0-py3.10.egg-info
+running install_scripts
+Installing qml_gui script to /home/shawn/RC-Project/install/qml_gui/lib/qml_gui
+writing list of installed files to '/home/shawn/RC-Project/build/qml_gui/install.log'

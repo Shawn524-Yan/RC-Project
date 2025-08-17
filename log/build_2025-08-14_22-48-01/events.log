@@ -1,0 +1,30 @@
+[0.000000] (-) TimerEvent: {}
+[0.001705] (qml_gui) JobQueued: {'identifier': 'qml_gui', 'dependencies': OrderedDict()}
+[0.002004] (qml_gui) JobStarted: {'identifier': 'qml_gui'}
+[0.100118] (-) TimerEvent: {}
+[0.200500] (-) TimerEvent: {}
+[0.299959] (qml_gui) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/qml_gui', 'build', '--build-base', '/home/shawn/RC-Project/build/qml_gui/build', 'install', '--record', '/home/shawn/RC-Project/build/qml_gui/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/shawn/RC-Project/src/qml_gui', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'MAIL': '/var/mail/shawn', 'USER': 'shawn', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/shawn', 'OLDPWD': '/mnt/e/RC-Project', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/shawn/RC-Project/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'shawn', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/shawn/.local/bin:/home/shawn/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/shawn/RC-Project/install/qml_gui:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/shawn/RC-Project/build/qml_gui', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/shawn/RC-Project/build/qml_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages:/home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.302267] (-) TimerEvent: {}
+[0.402403] (-) TimerEvent: {}
+[0.410668] (qml_gui) StdoutLine: {'line': b'running egg_info\n'}
+[0.410924] (qml_gui) StdoutLine: {'line': b'writing ../../build/qml_gui/qml_gui.egg-info/PKG-INFO\n'}
+[0.411247] (qml_gui) StdoutLine: {'line': b'writing dependency_links to ../../build/qml_gui/qml_gui.egg-info/dependency_links.txt\n'}
+[0.411437] (qml_gui) StdoutLine: {'line': b'writing entry points to ../../build/qml_gui/qml_gui.egg-info/entry_points.txt\n'}
+[0.411595] (qml_gui) StdoutLine: {'line': b'writing requirements to ../../build/qml_gui/qml_gui.egg-info/requires.txt\n'}
+[0.411701] (qml_gui) StdoutLine: {'line': b'writing top-level names to ../../build/qml_gui/qml_gui.egg-info/top_level.txt\n'}
+[0.412768] (qml_gui) StdoutLine: {'line': b"reading manifest file '../../build/qml_gui/qml_gui.egg-info/SOURCES.txt'\n"}
+[0.413244] (qml_gui) StdoutLine: {'line': b"writing manifest file '../../build/qml_gui/qml_gui.egg-info/SOURCES.txt'\n"}
+[0.413305] (qml_gui) StdoutLine: {'line': b'running build\n'}
+[0.413332] (qml_gui) StdoutLine: {'line': b'running build_py\n'}
+[0.413449] (qml_gui) StdoutLine: {'line': b'running install\n'}
+[0.413548] (qml_gui) StdoutLine: {'line': b'running install_lib\n'}
+[0.414153] (qml_gui) StdoutLine: {'line': b'running install_data\n'}
+[0.414189] (qml_gui) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.415251] (qml_gui) StdoutLine: {'line': b"removing '/home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages/qml_gui-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.415337] (qml_gui) StdoutLine: {'line': b'Copying ../../build/qml_gui/qml_gui.egg-info to /home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages/qml_gui-0.0.0-py3.10.egg-info\n'}
+[0.415815] (qml_gui) StdoutLine: {'line': b'running install_scripts\n'}
+[0.428030] (qml_gui) StdoutLine: {'line': b'Installing qml_gui script to /home/shawn/RC-Project/install/qml_gui/lib/qml_gui\n'}
+[0.428266] (qml_gui) StdoutLine: {'line': b"writing list of installed files to '/home/shawn/RC-Project/build/qml_gui/install.log'\n"}
+[0.439665] (qml_gui) CommandEnded: {'returncode': 0}
+[0.444553] (qml_gui) JobEnded: {'identifier': 'qml_gui', 'rc': 0}
+[0.444907] (-) EventReactorShutdown: {}

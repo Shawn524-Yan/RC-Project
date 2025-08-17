@@ -1,0 +1,21 @@
+[0.303s] Invoking command in '/home/shawn/RC-Project/src/qml_gui': PYTHONPATH=/home/shawn/RC-Project/build/qml_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/qml_gui build --build-base /home/shawn/RC-Project/build/qml_gui/build install --record /home/shawn/RC-Project/build/qml_gui/install.log --single-version-externally-managed install_data
+[0.414s] running egg_info
+[0.414s] writing ../../build/qml_gui/qml_gui.egg-info/PKG-INFO
+[0.415s] writing dependency_links to ../../build/qml_gui/qml_gui.egg-info/dependency_links.txt
+[0.415s] writing entry points to ../../build/qml_gui/qml_gui.egg-info/entry_points.txt
+[0.415s] writing requirements to ../../build/qml_gui/qml_gui.egg-info/requires.txt
+[0.415s] writing top-level names to ../../build/qml_gui/qml_gui.egg-info/top_level.txt
+[0.416s] reading manifest file '../../build/qml_gui/qml_gui.egg-info/SOURCES.txt'
+[0.416s] writing manifest file '../../build/qml_gui/qml_gui.egg-info/SOURCES.txt'
+[0.416s] running build
+[0.416s] running build_py
+[0.416s] running install
+[0.416s] running install_lib
+[0.417s] running install_data
+[0.417s] running install_egg_info
+[0.418s] removing '/home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages/qml_gui-0.0.0-py3.10.egg-info' (and everything under it)
+[0.418s] Copying ../../build/qml_gui/qml_gui.egg-info to /home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages/qml_gui-0.0.0-py3.10.egg-info
+[0.419s] running install_scripts
+[0.432s] Installing qml_gui script to /home/shawn/RC-Project/install/qml_gui/lib/qml_gui
+[0.432s] writing list of installed files to '/home/shawn/RC-Project/build/qml_gui/install.log'
+[0.445s] Invoked command in '/home/shawn/RC-Project/src/qml_gui' returned '0': PYTHONPATH=/home/shawn/RC-Project/build/qml_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shawn/RC-Project/install/qml_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/qml_gui build --build-base /home/shawn/RC-Project/build/qml_gui/build install --record /home/shawn/RC-Project/build/qml_gui/install.log --single-version-externally-managed install_data

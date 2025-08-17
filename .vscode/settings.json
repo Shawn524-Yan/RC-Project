@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/mnt/e/RC-Project/build/robot_gui",
+        "/mnt/e/RC-Project/install/robot_gui/lib/python3.10/site-packages",
+        "/mnt/e/RC-Project/install/qml_gui/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/mnt/e/RC-Project/build/robot_gui",
+        "/mnt/e/RC-Project/install/robot_gui/lib/python3.10/site-packages",
+        "/mnt/e/RC-Project/install/qml_gui/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

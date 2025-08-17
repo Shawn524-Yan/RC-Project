@@ -1,0 +1,3 @@
+[console_scripts]
+qml_gui = qml_gui.main:main
+
