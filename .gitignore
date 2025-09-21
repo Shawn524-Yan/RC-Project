@@ -2,21 +2,67 @@
 build/
 install/
 log/
+*.log
 
-# Python
+# Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+*.so
+*.egg-info/
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
 
-# Qt/QML
+# QML cache and temp
 *.qmlc
 *.jsc
+*.moc
+*.qrc
+*.autosave
 
 # VS Code settings
 .vscode/
+*.code-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Git history cleanup
+*.orig
+
+# Qt Creator / PySide6
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+
+# Temporary files
+*.swp
+*.bak
+*.tmp
+*.~*
+
+# Point cloud exports
+*.e57
+*.pcd
+*.ply
+*.las
+*.laz
+
+# Coverage and testing
+htmlcov/
+.tox/
+.coverage
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
 
 # Misc
-*.pcd
-*.e57
-*.swp
-# large files
-.vscode/browse.vc.db
+*.sqlite3
+*.db
+*.pid

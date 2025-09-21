@@ -1,6 +1,8 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
+import QtPositioning 5.15
+import QtLocation 5.15
 
 Window {
     visible: true
@@ -13,7 +15,7 @@ Window {
     Row {
         anchors.fill: parent
 
-        // 左侧控制面板（256宽）
+        // 256
         Rectangle {
             width: 256
             height: parent.height
@@ -77,23 +79,23 @@ Window {
             }
         }
 
-        // 右侧显示区域（800x600）
+        // 右侧显示区域800x600
         Rectangle {
             width: 800
             height: 600
-            color: "#000000"
+            color: "#885353ff"
 
             Loader {
                 id: viewLoader
                 anchors.fill: parent
-                sourceComponent: currentView === "pointCloud" ? pointCloudView :
-                                 currentView === "camera" ? cameraView :
-                                 currentView === "map" ? mapView : null
+                sourceComponent: controller.currentView === "pointCloud" ? pointCloudView :
+                                 controller.currentView === "camera" ? cameraView :
+                                 controller.currentView === "map" ? mapView : null
             }
         }
     }
 
-    // 模拟视图组件（可替换为真实内容）
+    // 模拟视图组件可替换为真实内容
     Component {
         id: pointCloudView
         Rectangle {
@@ -114,10 +116,95 @@ Window {
 
     Component {
         id: mapView
-        Rectangle {
-            color: "darkred"
+        Map {
+            id: mapItem
             anchors.fill: parent
-            Text { anchors.centerIn: parent; color: "white"; text: "Map view" }
+            zoomLevel: 16
+            center: QtPositioning.coordinate(-37.7877333,175.2834924)
+
+            plugin: Plugin {
+                name: "osm"
+                PluginParameter { name: "osm.mapping.offline.directory"; value: Qt.resolvedUrl("../resource/tile") }
+                PluginParameter { name: "osm.mapping.offline.tiles"; value: "true" }
+            }
+
+            MouseArea {
+                z: 999
+                anchors.fill: parent
+                //drag.target: mapItem
+                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                property bool isDragging: false
+                property var lastMousePos
+                hoverEnabled: true
+                propagateComposedEvents: true
+                onPressed: {
+                    console.log("Pressed:", mouse.button)
+                    if (mouse.button === Qt.LeftButton) {
+                        isDragging = true
+                        lastMousePos = Qt.point(mouseX, mouseY)
+                    }
+                }
+
+                onReleased: {
+                    if (mouse.button === Qt.LeftButton) {
+                        isDragging = false
+                    }
+                }
+
+                onClicked: {
+                    console.log("Mouse clicked:", mouse.button)
+                }
+                onPositionChanged: {
+                    if (isDragging) {
+                        var dx =  lastMousePos.x - mouseX
+                        var dy =  lastMousePos.y - mouseY
+                        lastMousePos = Qt.point(mouseX, mouseY)
+
+                        var metersPerPixel = 156543.03392 * Math.cos(mapItem.center.latitude * Math.PI / 180) / Math.pow(2, mapItem.zoomLevel)
+                        var deltaLon = dx * metersPerPixel / (111320 * Math.cos(mapItem.center.latitude * Math.PI / 180))
+                        var deltaLat = -dy * metersPerPixel / 110540
+
+                        mapItem.center.latitude += deltaLat
+                        mapItem.center.longitude += deltaLon
+                    }
+                }
+
+                onWheel:function(wheel) {
+                    if (wheel.angleDelta.y > 0) {
+                        mapItem.zoomLevel = Math.min(mapItem.zoomLevel + 1, 20)
+                    } else {
+                        mapItem.zoomLevel = Math.max(mapItem.zoomLevel - 1, 1)
+                    }
+                }
+                onDoubleClicked: {
+                    mapItem.zoomLevel = Math.min(mapItem.zoomLevel + 1, 20)
+                }
+            }
+
+            // Optional: Touch support for pinch zoom
+            MultiPointTouchArea {
+                anchors.fill: parent
+                minimumTouchPoints: 2
+                maximumTouchPoints: 2
+                onTouchUpdated: {
+                    if (touchPoints.length === 2) {
+                        var p1 = touchPoints[0]
+                        var p2 = touchPoints[1]
+                        var dx = p2.x - p1.x
+                        var dy = p2.y - p1.y
+                        var distance = Math.sqrt(dx*dx + dy*dy)
+                        if (typeof lastDistance !== "undefined") {
+                            if (distance > lastDistance + 10) {
+                                mapItem.zoomLevel = Math.min(mapItem.zoomLevel + 1, 20)
+                            } else if (distance < lastDistance - 10) {
+                                mapItem.zoomLevel = Math.max(mapItem.zoomLevel - 1, 1)
+                            }
+                        }
+                        lastDistance = distance
+                    }
+                }
+                property real lastDistance: 0
+            }
         }
     }
 }
